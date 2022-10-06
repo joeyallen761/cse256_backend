@@ -1,0 +1,696 @@
+/* Global */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    background-color: rgb(250, 250, 250);
+    color: rgb(60, 60, 60);
+    font-family: monospace;
+}
+
+label {
+    font-size: 18px;
+}
+
+input, textarea {
+    font-family: inherit;
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+select  {
+    border: solid rgb(226, 226, 226) 2px;
+    font-size: inherit;
+    border-radius: 5px;
+}
+
+button {
+    font-family: monospace;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+button.small {
+    font-size: 14px;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+h1, h2, h3, h4 {
+    font-family: inherit;
+}
+
+h1, .title {
+    font-size: 48px;
+}
+
+h2, .subtitle {
+    font-size: 32px;
+}
+
+h3, .subsubtitle {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+button.act {
+    display: block;
+    font-size: 24px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: white;
+    margin: 20px auto;
+}
+
+button.danger {
+    background-color: #F0241A;
+    color: white;
+}
+
+button.danger:hover {
+    background-color: #c41d14;
+}
+
+button.safe {
+    background-color: #28a745;
+    color: white;
+}
+
+button.safe.active:hover {
+    background-color: #165d26;
+}
+
+button.safe.active {
+    background-color: #1b7930;
+    color: white;
+}
+
+button.safe:hover {
+    background-color: #24983f;
+}
+
+button.basic {
+    color: rgb(250, 250, 250);
+    background-color: #0388FC;
+}
+
+button.basic:hover {
+    background-color: #0281F0;
+}
+
+button.info {
+    color: rgb(250, 250, 250);
+    background-color: #17a2b8;
+}
+
+button.info:hover {
+    background-color: #138496;
+}
+
+.hide {
+    display: none !important;
+}
+
+.right {
+    float: right;
+}
+
+/* File Input Styling */
+
+.student-file-input > div:first-child {
+    border: solid 2px rgb(226, 226, 226);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.student-file-input > div:first-child > h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.input-file {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+label.student-input, label.csv-input {
+    font-size: 24px;
+    text-align: center;
+    display: block;
+    border: solid 2px rgb(192, 192, 192);;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 5px;
+    color: rgb(250, 250, 250);
+    background-color: #0388FC;
+}
+
+label.student-input:hover, label.csv-input:hover {
+    background-color: #0281F0;
+}
+
+/* Splash Page Styling */
+
+.splash {
+    background-color: white;
+}
+
+/* Login Form */
+
+#login-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(
+            45deg,
+            rgb(1, 62, 115) 0% 19.25%,
+            rgb(1, 81, 150) 20% 39.25%,
+            rgb(2, 100, 185) 40% 59.25%,
+            rgb(3, 118, 220) 60% 79.25%,
+            rgb(3, 137, 255) 80% 100%
+    );
+}
+
+#login-container > form > h1 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#login-container > form {
+    background-color: white;
+    border-color: rgb(192, 192, 192);
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 1px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#login-container > form > fieldset {
+    background-color: rgb(250, 250, 250);
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+#login-container > form > fieldset > label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#login-container > form > fieldset > input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    border-color: rgb(192, 192, 192);
+    border-radius: 5px;
+
+    border-width: 1px;
+    background-color: white;
+}
+
+/* Header */
+
+.header {
+    background-color: rgb(240, 240, 240);
+    display: flex;
+}
+
+.header > .filler {
+    width: 20%;
+    min-width: 20%;
+    flex: 0 0 0;
+    background-image: linear-gradient(
+            45deg,
+            rgb(1, 62, 115) 0% 19.25%,
+            rgb(1, 81, 150) 20% 39.25%,
+            rgb(2, 100, 185) 40% 59.25%,
+            rgb(3, 118, 220) 60% 79.25%,
+            rgb(3, 137, 255) 80% 100%
+    );
+    color: white;
+    text-align: center;
+    font-size: 48px;
+    line-height: 68px;
+    border-right: solid rgb(226, 226, 226) 3px;
+    box-sizing: border-box;
+}
+
+.header > button {
+    padding: 20px;
+    flex: 1 1 0;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+}
+
+.header > button:hover {
+    background-color: rgb(226, 226, 226);
+}
+
+.header > button.active {
+    color: rgb(250, 250, 250);
+    background-color: #0388FC;
+}
+
+.header > button.active:hover {
+    background-color: #0281F0;
+}
+
+/* Update Project Styling */
+
+.update-project {
+    padding: 15px;
+    display: block!important;
+}
+
+.update-project:hover {
+    background-color: #e8e8e8;
+}
+
+.update-project > .project-name {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.update-project > .project-tags {
+    margin: 10px;
+    border: solid 2px rgb(226, 226, 226);
+    border-radius: 5px;
+    background-color: rgb(250, 250, 250);
+}
+
+.update-project > .project-tags > h4 {
+    margin: 10px;
+    text-align: center;
+}
+
+.selected {
+    background-color: #e8e8e8;
+}
+
+.update-tasks {
+    display: flex;
+}
+
+.update-tasks > ul {
+    list-style-type: none;
+    padding: 5px;
+    min-width: 100px;
+    min-height: 300px;
+    border-right: 4px solid rgb(226, 226, 226);
+}
+
+.update-tasks > ul > li:first-child {
+    border-color: #969696;
+    font-weight: bold;
+}
+
+.update-tasks > ul > li {
+    margin: 0 5px;
+    padding: 5px 0;
+    text-align: center;
+    border-bottom: solid 2px rgb(226, 226, 226);
+}
+
+.update-tasks > ul > li ~ li:hover {
+    cursor: pointer;
+    background-color: rgb(226, 226, 226);
+}
+
+.form-container {
+    width: 100%;
+    padding: 5px;
+}
+
+.form-container > form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container > form > textarea {
+    flex-grow: 1;
+}
+
+.form-container > form > div > button {
+    box-sizing: border-box;
+    width: calc(50% - 5px);
+}
+
+.form-container > form > div > button[type=submit] {
+    margin-right: 10px;
+}
+
+.form-container > form > input, .form-container > form > textarea {
+    margin-bottom: 10px;
+    width: 100%;
+    resize: none;
+    box-sizing: border-box;
+    display: block;
+}
+
+/* Project Iteration Selector Styling */
+
+
+.project-iteration-selector {
+    float: right;
+    padding: 4px;
+    border: solid 2px rgb(226, 226, 226);
+    border-radius: 5px;
+    background-color: rgb(240, 240, 240);
+}
+
+.project-iteration-description {
+    padding: 0 5px 5px;
+    border-bottom: solid 2px rgb(226, 226, 226);
+    margin-bottom: 5px
+}
+
+.project-selector {
+    width: 73%;
+}
+
+.separator {
+    display: inline-block;
+    width: 5%;
+}
+
+.iteration-selector {
+    width: 22%;
+}
+
+/* Table Styling */
+
+.table-container {
+    padding: 10px;
+    border: solid rgb(226, 226, 226) 2px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.table-description > p {
+    margin: 10px 0;
+}
+
+.table-container table {
+    width: 100%;
+}
+
+.table-container th {
+    background-color: rgb(240, 240, 240);
+}
+
+.table-container thead th {
+
+}
+
+.table-container table, .table-container th, .table-container td {
+    border: solid rgb(200, 200, 200) 1px;
+    border-collapse: collapse;
+    padding: 4px 3px;
+}
+
+/* Tab Styling */
+.tab-content {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 110px);
+    overflow: hidden;
+}
+
+.tab-header {
+    margin-bottom: 10px;
+}
+
+.flex-actions {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+ul.projects {
+    list-style-type: none;
+}
+
+ul.projects > li {
+    border: solid 2px rgb(226, 226, 226);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: inherit;
+}
+
+ul.projects > li > input {
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+ul.projects > li > input:disabled {
+    border-color: transparent;
+}
+
+ul.projects > li:last-child > input {
+    flex: 1 1 0;
+    margin-right: 20px;
+}
+
+.sidebar {
+    max-width: 20%;
+    min-width: 20%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    border-top: solid rgb(226, 226, 226) 3px;
+}
+
+.sidebar > .action {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 24px;
+    color: inherit;
+    padding: 15px 10px;
+    border-left: none;
+    border-top: none;
+    border-right: solid rgb(226, 226, 226) 3px;
+    border-bottom: solid rgb(226, 226, 226) 3px;
+    border-radius: 0;
+}
+
+.sidebar-filler {
+    flex: 1 1 auto;
+    background-color: rgb(239, 239, 239);
+    border-right: solid rgb(226, 226, 226) 3px;
+}
+
+.sidebar > .action:hover {
+    background-color: rgb(226, 226, 226);
+}
+
+.sidebar > .action.active {
+    border-right: solid rgb(250, 250, 250) 3px;
+    background-color: rgb(250, 250, 250);
+}
+
+.output-container {
+    padding: 20px;
+    width: 80%;
+    border-top: solid rgb(226, 226, 226) 3px;
+    overflow-y: scroll;
+    height: calc(100vh - 156px);
+}
+
+.output {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 700px;
+    overflow-y: scroll;
+}
+
+/* Generic Table Styling */
+
+.refresh {
+    width: 100%;
+}
+
+table.component {
+    width: 100%;
+    border-radius: 5px;
+    border-collapse: collapse;
+}
+
+table.component th {
+    background-color: rgb(239, 239, 239);
+}
+
+table.component th, table.component td {
+    border: 2px solid rgb(226, 226, 226);
+    padding: 5px;
+}
+
+table.component td.ready {
+    background-color: #28a745;
+    color: white;
+}
+
+table.component td.not-ready {
+    background-color: #F0241A;
+    color: white;
+}
+
+/* Status Styling */
+
+.status-container {
+    padding: 10px;
+    border: solid rgb(226, 226, 226) 2px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.status {
+    margin: 10px 0;
+}
+
+/* Button with Description Styling */
+
+.button-with-description {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: solid rgb(226, 226, 226) 2px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container > button:first-child {
+    flex: 1 auto auto;
+    margin-right: 10px;
+}
+
+.button-container > button:first-child + * {
+    display: inline-block;
+}
+
+.button-container > span {
+    margin-right: 15px;
+}
+
+.button-container > span > * {
+    height: 95%;
+}
+
+.button-with-description > div + div {
+    margin-top: 10px;
+}
+
+/* Attribution */
+
+.footer {
+    padding: 10px;
+    background-color: rgb(240, 240, 240);
+    border-top: solid rgb(226, 226, 226) 3px;
+}
+
+.attribution {
+    text-align: center;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.file-drop {
+    text-align: center;
+    padding: 40px 0;
+}
+
+input.filter-input {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 10px 0;
+}
+
+table.hit-data {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.hit-data th, table.hit-data td {
+    border: 2px solid lightgray;
+    padding: 5px;
+}
+
+div.toggle-container {
+    display: flex;
+    width: 100%;
+}
+
+div.toggle-container > button.toggle:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+div.toggle-container > button.toggle:last-child{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+button.toggle {
+    width: 50%;
+    flex-grow: 1;
+    border-radius: 0;
+}
+
+.payment-input {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.payment-input > input {
+    flex: 1;
+}
